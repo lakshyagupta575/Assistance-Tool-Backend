@@ -21,6 +21,8 @@ func main() {
 		db.ErrorCheck(err)
 	})
 
+	myRouter.HandleFunc("/register",dl.RegisterHandler).Methods("POST","OPTIONS")
+	myRouter.HandleFunc("/login",dl.LoginHandler).Methods("POST","OPTIONS")
 	myRouter.HandleFunc("/contact",dl.ContactHandler).Methods("GET","OPTIONS")
 
     log.Fatalln(http.ListenAndServe(":5010", myRouter))

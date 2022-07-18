@@ -9,5 +9,5 @@ import (
 
 func ContactHandler(w http.ResponseWriter, req *http.Request) {
 	db.AppendHeaders(w,req)
-	log.Printf("I have been hit!")
+	log.Printf("Contact Backend API Hit!")
 }
